@@ -1,38 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Restaurants Details</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
 
     <%- include("../partial/navbar") %>
 
-    <h1>Restaurants Details</h1>
-    <h2><%=restaurant.name%></h2>
-    <p>Address: <%=restaurant.address%></p>
-    <p>
-    <%if(!restaurant.isOpen){%>
-    <span style="color: red;">Closed</span>
-    <%} else {%>
-    <span style="color: green;">Open</span>
-    <%}%>
-    </p>
-    <p>Phone: <%=restaurant.phone%></p>
+        <!-- <h1>Restaurants Details</h1> -->
 
-<br><br>
+        <div class="res-header">
+            <h1>
+                <%=restaurant.name%>
+            </h1>
 
-    <p>
-        <%for(let item of restaurant.menu){%>
-            <%=item.name%><br>
-            <%=item.price%><br>
-            <%=item.rating%>
-            <br><br>
-        <%}%>
-    </p>
+            <div class="status">
+                <%if(!restaurant.isOpen){%>
+                    <span class="closed">Closed</span>
+                    <%} else {%>
+                        <span class="open">Open</span>
+                        <%}%>
+            </div>
+
+            <p class="address">📍 <%=restaurant.address%>
+            </p>
+            <p class="phone">📞 <%=restaurant.phone%>
+            </p>
+        </div>
+        <br><br>
+        <h2>Menu</h2>
+        <br>
+        <div class="menu-grid">
+            <%for(let item of restaurant.menu){%>
+
+                <div class="menu-card">
+                    <h3>
+                        <%=item.name%>
+                    </h3>
+                    <p class="price"><%=item.price%> BD
+                    </p>
+                    <p class="rating">⭐ <%=item.rating%>
+                    </p>
+                </div>
+
+                <%}%>
+        </div>
+
+
 
 </body>
+
 </html>

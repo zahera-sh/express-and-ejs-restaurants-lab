@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Restaurants</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
 
     <%- include("../partial/navbar") %>
 
-    <h1>All Restaurants</h1>
-    
-    <%for(let oneRestaurant of restaurants){%>
-        <a href="/restaurants/<%=oneRestaurant.id%>"> <%=oneRestaurant.name%> </a>
-        <%if(!oneRestaurant.isOpen){%>
-         - <span style="color: red;">Closed</span>
-    <%}%>
-    <br>
-    <%}%>
+        <h1>Our Restaurants</h1>
 
+        <div class="res-grid">
+            <%for(let oneRestaurant of restaurants){%>
+
+                <a href="/restaurants/<%=oneRestaurant.id%>" class="res-crd"
+                    style="background-image: url('<%= oneRestaurant.image %>');">
+
+                    <div class="overlay">
+                        <h2>
+                            <%= oneRestaurant.name %>
+                        </h2>
+
+                        <% if(!oneRestaurant.isOpen){ %>
+                            <span class="closed">Closed</span>
+                            <%}%>
+                    </div>
+                </a>
+                <%}%>
+        </div>
 </body>
+
 </html>

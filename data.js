@@ -8,6 +8,7 @@ const restaurants = [
     isOpen: true,
     address: 'City Centre Road 4650, Manama',
     phone: '55509876',
+    image: "/AlBaik-img.jpg",
     menu: [
       {
         name: 'Chicken Filtet Sandwich',
@@ -32,6 +33,7 @@ const restaurants = [
     isOpen: false,
     address: '150 شارع الحكومة, Manama',
     phone: '06892543',
+    image: "/Haji-img.jpg",
     menu: [
       {
         name: 'Chicken Machboos',
@@ -56,6 +58,7 @@ const restaurants = [
     isOpen: true,
     address: 'Rd No 2643, Busaiteen',
     phone: '17330108',
+    image: "/AlJabriya-img.jpg",
     menu: [
       {
         name: 'Roosy Sarookh',

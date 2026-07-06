@@ -8,6 +8,7 @@ const restaurants = require("./data")
 // ------------------- Public -------------------
 
 app.use(express.static("public"))
+app.use(express.static("assets"))
 
 // ------------------- routes -------------------
 

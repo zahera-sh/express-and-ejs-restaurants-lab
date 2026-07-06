@@ -1,0 +1,258 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Bitcount+Single:wght@100..900&family=Bonbon&family=Honk:MORF@15&family=Londrina+Shadow&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto+Slab:wght@100..900&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto Slab", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #000000;
+}
+
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FEFEFE;
+    border: solid 1px #FEFEFE;
+    border-bottom-color: #FABE1E;
+}
+
+
+.logo-img {
+    width: 80px;
+    height: auto;
+    margin: 0 0 0 15px;
+}
+
+
+.nav-side {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 0 15px 0 0;
+}
+
+
+.nav-side a,
+.nav-side span {
+    color: #000000;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+
+.nav-side a:hover {
+    color: #FABE1E;
+    transform: translateY(-3px)
+}
+
+
+h1 {
+    margin-top: 40px;
+}
+
+
+h1,
+p {
+    text-align: center;
+}
+
+
+.logo-name {
+    display: inline-block;
+    animation: driveIn 1s ease-out;
+}
+
+
+/* drive in animation */
+@keyframes driveIn {
+    from {
+        transform: translateX(120vw) skewX(-25deg);
+        opacity: 0;
+    }
+
+    80% {
+        transform: translateX(20px) skewX(5deg);
+        opacity: 1;
+    }
+
+    to {
+        transform: translateX(0) skewX(0);
+    }
+}
+
+
+.to-res {
+    display: flex;
+    justify-content: center;
+}
+
+
+.to-res a {
+    padding: 10px 15px;
+    background-color: #000000;
+    color: #FEFEFE;
+    text-decoration: none;
+    font-size: 15px;
+    margin-top: 60px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.to-res a:hover {
+    background-color: #FABE1E;
+    color: #000000;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+
+/* cards template */
+.res-grid,
+.menu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+    justify-content: center;
+}
+
+
+.res-crd {
+    position: relative;
+    width: 200px;
+    aspect-ratio: 3/4;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    text-decoration: none;
+    color: #FEFEFE;
+    transition: transform 0.2s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    padding: 10px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.25s ease;
+}
+
+
+.res-crd:hover .overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+.res-crd:hover {
+    color: #FABE1E;
+    transform: scale(1.03);
+}
+
+
+h2 {
+    font-size: 15px;
+    text-align: center;
+    margin: 0;
+}
+
+
+/* cards template */
+.res-header {
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+
+.res-header h1 {
+    font-size: 25px;
+}
+
+
+.status {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.open {
+    background: #d4f8d4;
+    color: #1a7f1a;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+.closed {
+    background: #ffd6d6;
+    color: #cc0000;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+
+.address,
+.phone {
+    margin: 5px 0;
+    color: #555;
+}
+
+
+.menu-card {
+    padding: 15px;
+    width: 200px;
+    aspect-ratio: 4/3;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+    text-align: center;
+}
+
+.menu-card:hover {
+    transform: translateY(-3px);
+    background-color: #FABE1E;
+    color: #000000;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.25);
+}
+
+
+.price {
+    font-weight: bold;
+    text-align: left;
+    margin-top: 30px;
+}
+
+
+.rating {
+    color: #FABE1E;
+    text-align: left;
+}
+
+.menu-card:hover .rating {
+    color: #000000;
+}
